@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load django_markdown %}
+
+{% block blog_entries %}
+{% for object in results %}
+	<div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+    	<a href="{% url "game_detail" slug=object.slug %}" class="thumbnail">
+        	<img src={{ object.imageurl }} class="img-responsive">
+    	</a>
+	</div>
+{% endfor %}
+{% endblock %}
