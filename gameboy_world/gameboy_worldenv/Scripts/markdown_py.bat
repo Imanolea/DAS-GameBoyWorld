@@ -1,1 +1,0 @@
-@"C:\Users\Imanolea\Documents\GitHub\DAS-GameBoyWorld\gameboy_world\gameboy_worldenv\Scripts\python.exe" "C:\Users\Imanolea\Documents\GitHub\DAS-GameBoyWorld\gameboy_world\gameboy_worldenv\Scripts\markdown_py" %*

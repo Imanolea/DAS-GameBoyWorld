@@ -1,3 +1,0 @@
-Django==1.7.3
-django-markdown==0.8.4
-Markdown==2.5.2
