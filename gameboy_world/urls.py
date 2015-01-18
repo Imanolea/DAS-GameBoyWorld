@@ -6,3 +6,7 @@ urlpatterns = patterns(
     url(r'^markdown/', include('django_markdown.urls')),
     url(r'^', include('games.urls')),
 )
+
+urlpatterns += patterns('',
+	(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+)
