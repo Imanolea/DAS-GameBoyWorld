@@ -2,8 +2,14 @@
 {% load django_markdown %}
 
 {% block blog_entries %}
-  <div class="col-md-9">
+  <div class="col-md-10">
     <h2><a href="{% url "game_detail" slug=object.slug %}">{{ object.title }}</a></h2>
-    <p>{{ object.description|markdown }}</p>
+    <div class="row">
+      <div class="col-sm-8"><span>{{ object.description|markdown }}</span></div>
+      <div class="col-sm-4"><img src={{ object.ingameurl }} class="img-responsive"></div>
+    </div>
+    <div class="row">
+    	<div class="col-sm-8"><p><b>Descargar: </b><a href="{{ object.downloadurl }}">{{ object.downloadurl }}<a/></p></div>
+	</div>
   </div>
 {% endblock %}

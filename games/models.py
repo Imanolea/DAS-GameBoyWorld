@@ -10,6 +10,8 @@ class Game(models.Model):
 	description = models.TextField()
 	slug = models.SlugField(max_length=200, unique=True)
 	imageurl = models.URLField(max_length=200)
+	downloadurl = models.URLField(max_length=200)
+	ingameurl = models.URLField(max_length=200)
 
 	objects = GameQuerySet.as_manager()
 
