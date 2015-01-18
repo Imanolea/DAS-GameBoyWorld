@@ -5,7 +5,6 @@ from . import models
 class GameIndex(generic.ListView):
 	queryset = models.Game.objects.order_by('title')
 	template_name = "home.html"
-	paginate_by = 20
 
 class GameDetail(generic.DetailView):
 	model = models.Game
@@ -19,4 +18,11 @@ def search(request):
     else:
         # If no query was entered, simply return all objects
         results = models.Game.objects.order_by('title')
-    return render(request, "search.html", {"results": results})
+        
+    
+    if results:
+        return render(request, "search.html", {"results": results})
+    else:
+        return render(request, "nogame.html", {"query": query})
+
+    

@@ -1,0 +1,1 @@
+web: gunicorn gameboy_world.wsgi --log-file -
